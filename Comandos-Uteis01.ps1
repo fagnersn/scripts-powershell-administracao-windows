@@ -11,3 +11,8 @@ Get-WmiObject -Class Win32_BIOS -ComputerName LAP-SUPORTE
 #Listar os 5 processos que estão usando mais memória
 
 ps | sort –p ws | select –last 10
+
+#Listar todos os comandos do Powershell
+
+Get-Command
+Get-Command -Name *Hyper-v*
