@@ -16,3 +16,6 @@ ps | sort –p ws | select –last 10
 
 Get-Command
 Get-Command -Name *Hyper-v*
+
+#Ver quem desligou o Servidor#
+Get-EventLog -LogName System -After "07/03/2020 00:00:01" | Where {$_.EventID -eq "1074"} WORD
